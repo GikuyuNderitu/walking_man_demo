@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Walking Man</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Walking Man has walked</h1>
+
+        <h3>{{session['miles']}} miles</h3>
+
+        <form action="/walk" method='POST'>
+            <input type="hidden" name="direction" value="forward">
+            <input type="number" value=0 min=0 name="miles">
+            <button type="submit">Walk Forwards</button>
+        </form>
+
+        <form action="/walk" method='POST'>
+            <input type="hidden" name="direction" value="back">
+            <input type="number" value=0 min=0 name="miles">
+            <button type="submit">Walk Backwards</button>
+        </form>
+
+        <a href="/reset">Reset Session</a>
+    </div>
+</body>
+</html>
